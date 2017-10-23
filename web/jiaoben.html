@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery键盘左右键分页效果 - 站长素材</title>
+<link rel="stylesheet" href="css/zzsc.css" type="text/css">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div class="pagnation" id="pagnation">
+	<a href="http://sc.chinaz.com" target="_blank" class="page-prev">上一页</a>
+	<a href="http://sc.chinaz.com" target="_blank" class="current">1</a>
+	<a href="http://sc.chinaz.com" target="_blank">2</a>
+	<a href="http://sc.chinaz.com" target="_blank">3</a>
+	<a href="http://sc.chinaz.com" target="_blank">4</a>
+	<a href="http://sc.chinaz.com" target="_blank">5</a>...
+	<a href="http://sc.chinaz.com" target="_blank">13</a>
+	<a href="http://sc.chinaz.com" target="_blank" class="page-next">下一页</a>
+</div>
+<div class="pagnation-tips">提示：支持键盘“← →”键翻页</div>
+<script>
+	var pagnation=$("#pagnation");
+	$(document).on("keydown",function(event){
+		switch(event.keyCode){
+			 case 37 : window.location.href = pagnation.find(".page-prev").attr("href");break;
+			 case 39 : window.location.href = pagnation.find(".page-next").attr("href");break
+		}
+	});
+</script>
+<!-- 代码 结束 -->
+<div style="text-align:center;margin:50px 0">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+<p style="margin:20px 0"></p>
+</div>
+</body>
+</html>
